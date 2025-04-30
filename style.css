@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 0px;
+    padding: 0 0px;
+}
+
+body {
+    min-height: 100vh;
+    color: #ffffff;
+    
+}
+
+.background {
+    background-image: url('/BRL/image/facilities2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1 ;
+    min-height: 100vh; 
+    opacity: 0.5;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    align-items: center;
+}
+
+.left-links,
+.right-links {
+    display: flex;
+}
+
+.left-links a,
+.right-links a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.left-links a:hover,
+.right-links a:hover {
+    color: #57B4BA;
+}
+
+.nav-links a:hover {
+    color: #57B4BA;
+}
+
+.landing {
+    text-align: center;
+    margin-top: 8%;
+}
+
+.landing h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    background-color: #A3D1C6;
+    color: #fff;
+    display: inline-block;
+    padding: 30px 45px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.welcome-wrapper {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 20px 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.welcome-text h1 {
+    font-size: 28px;
+    color: #1f2f2f;
+    margin-bottom: 5px;
+}
+
+.welcome-text h2 {
+    font-size: 24px;
+    color: #A38518;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    background-color: #577f4f;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px auto 0;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-box form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.search-box .form-group {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    flex: 1;
+    min-width: 150px;
+    color: white;
+}
+
+.search-box .form-group.full-width {
+    justify-content: flex-end;
+}
+
+.search-box input,
+.search-box select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.search-box .btn {
+    background-color: white;
+    color: #577f4f;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+}
+
+.search-box .btn:hover {
+    background-color: #e6e6e6;
+}
+
+
+@media (max-width: 600px) {
+    .search-box form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box input,
+    .search-box select {
+        width: 100%;
+        max-width: 100%;
+    }
+}
