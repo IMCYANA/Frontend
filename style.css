@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans Thai'}
+    font-family: 'Noto Sans Thai', sans-serif;
+}
 
 body {
     min-height: 100vh;
@@ -24,7 +25,6 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    min-height: 100vh;
     opacity: 0.5;
 }
 
@@ -34,8 +34,8 @@ body {
     align-items: center;
     padding: 20px 50px;
     background-color: #ffffff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: #000000;
 }
 
 .logo img {
@@ -64,10 +64,7 @@ body {
 }
 
 .left-links a:hover,
-.right-links a:hover {
-    color: #57B4BA;
-}
-
+.right-links a:hover,
 .nav-links a:hover {
     color: #57B4BA;
 }
@@ -90,12 +87,10 @@ body {
 .welcome-wrapper {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 40px 20px 20px;
-    border-radius: 20px;
-    margin-top: 40px;
+    border-radius: 10px;
+    margin: 40px auto 0;
     text-align: center;
     max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .welcome-text h1 {
@@ -112,14 +107,15 @@ body {
 }
 
 .search-box {
+    display: flex;
+    flex-direction: column;
     background-color: #577f4f;
     border-radius: 15px;
-    padding: 10px;
+    padding: 20px;
     margin: 20px auto 0;
     max-width: 800px;
-    width: 100%;
-    gap: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: white;
 }
 
 .search-box form {
@@ -127,21 +123,22 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 15px;
+    width: 100%;
 }
 
-.search-box .form-group {
+.form-group {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    flex: 1;
-    min-width: 150px;
-    color: white;
-    margin:15px
+    flex: 1 1 200px;
+    margin: 10px 0;
+    align-items: center;
 }
 
-.search-box .form-group.full-width {
+.full-width {
+    flex: 1 1 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 10px;
 }
 
@@ -152,10 +149,11 @@ body {
     border: none;
     font-size: 14px;
     width: 100%;
-    max-width: 100%;
 }
 
 .search-box .btn {
+    width: 119px;
+    height: 63px;
     background-color: white;
     color: #577f4f;
     font-weight: bold;
@@ -167,7 +165,8 @@ body {
 }
 
 .search-box .btn:hover {
-    background-color: #e6e6e6;
+    background-color: #81b377;
+    color: #fff;
 }
 
 .resort-photo {
@@ -188,16 +187,40 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .left-links,
+    .right-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
     .search-box form {
         flex-direction: column;
-        align-items: stretch;
+    }
+
+    .form-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .full-width {
+        flex-direction: column;
     }
 
     .search-box input,
     .search-box select {
         width: 100%;
-        max-width: 100%;
     }
 
     .resort-photo {

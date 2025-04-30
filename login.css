@@ -2,14 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans Thai';
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+
+html, body {
+    height: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Noto Sans Thai';
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,10 +22,40 @@ form {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     min-width: 300px;
+    width: 100%;
+    max-width: 400px;
 }
 
-.button-group {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
+form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #577f4f;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #81b377;
 }
